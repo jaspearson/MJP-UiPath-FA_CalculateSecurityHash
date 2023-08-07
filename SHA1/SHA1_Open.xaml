@@ -1,0 +1,162 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SHA1_Open" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Sha1Url" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1369,1228</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SHA1_Open_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Opens SHA1generator website from the URL argument.&#xA;&#xA;Pre-condition: None.&#xA;&#xA;Post-condition: Opens Edge SHA1 generator." DisplayName="SHA1_Open" sap:VirtualizedContainerService.HintSize="546,1163" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="iBrowser" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log workflow started." sap:VirtualizedContainerService.HintSize="484,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Navigating to the SHA1 website.&quot;]" />
+    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Edge: SHA-1 Hash Generator Online Tool" sap:VirtualizedContainerService.HintSize="484,784" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" OutUiElement="[iBrowser]" ScopeGuid="54f0bae9-d0fc-4cf3-a694-ab3139f0b8e9" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,527" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate Browser" sap:VirtualizedContainerService.HintSize="388,87" sap2010:WorkflowViewState.IdRef="Activate_1">
+              <ui:Activate.Target>
+                <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[iBrowser]" Id="ad406cac-4602-4cc1-9909-acfd2b57796b">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Activate.Target>
+            </ui:Activate>
+            <uix:NCheckState DisplayName="Check App State 'SHA-1 Hash Generator'" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="388,287" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="54f0bae9-d0fc-4cf3-a694-ab3139f0b8e9" Timeout="30" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="SHA-1 Hash Generator Label appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log SHA1 app opened" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;SHA1 app opened&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://codebeautify.org/sha1-hash-generator" DesignTimeRectangle="432, 201, 368, 90" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'SHA-1 Hash Generator'" FullSelectorArgument="&lt;webctrl id='mainTitle' tag='H1' aaname='SHA-1 Hash Generator' /&gt;" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;webctrl id='mainTitle' tag='H1' aaname='SHA-1 Hash Generator' type='' class='title is-size-2' check:text='SHA-1 Hash Generator' /&gt;" Guid="5c6f282a-18b7-4423-981c-3851adbcf245" ImageBase64="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" InformativeScreenshot="2522c27bcd0c8f7013970280574a0eb6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA-1 Hash Generator Online Tool' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="242, 21, 1638, 778" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFqSURBVDhP1ZHPqwFxFMXf32dqWFAWE9mIWU0WlCZLllhY+Q9srC0mojCJRlJ+lCxQUgopFhzd8xjvbd/bvHdW07n3fr7n3vnAL/XHAKfTCfP5HJPJBIfD4el++vv9Hvf7/em85QKm0ymSySR8Ph9UVUUikaAnQ+VyGYZh4Hq9PrvfIuB4PHIgFouh3W6j1WpB0zSYponz+Yx8Po9QKITlconxeMz+lwhwHAderxeWZdEUSWOv18PlckGxWITH40Emk0EkEkEul3NXJKDZbEJRFAyHQ5pfdbvdUCgU+MBoNEK9Xmdvo9FgnQDbtmlK9Je63S7BkkAA4XCYN1itVggEAqhUKuwjYLfbIRqNIpVKMXq/3+cN0uk0byAAv9+P9XrNuhy5Vqu9ASJJIfsFg0G+IN+DwYB/oVQqMWE2m0U8Hoeu69hsNpxzASIxZQ2Jvt1u6QlgNpuh0+nw2NVqFYvFgjXRN8BP9O8BwAMPyJnZ19cqBwAAAABJRU5ErkJggg==" InformativeScreenshot="8504f6eb15604102d242a7d380d055a5.jpg" Selector="&lt;html app='msedge.exe' title='SHA-1 Hash Generator Online Tool' /&gt;" Title="SHA-1 Hash Generator Online Tool" Url="[in_Sha1Url]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
